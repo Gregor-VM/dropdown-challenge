@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <!-- JavaScript -->
+
+  <script src="script.js" defer></script>
+
+  <!-- Fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css" />
+  
+</head>
+<body>
+
+  <div id="background" class="background"></div>
+
+  <nav>
+    <div class="mobile_nav">
+      <img class="logo" src="images/logo.svg" alt="logo snap" />
+      <img id="mobile-menu" class="mobile_menu" src="images/icon-menu.svg" alt="mobile menu icon" />
+    </div>
+
+    <div id="nav-options" class="nav_options">
+      <img id="close-menu" class="close_menu" src="images/icon-close-menu.svg" />
+      <div class="dropdown_section">
+        <ul>
+          <li id="features">Features<img src="images/icon-arrow-down.svg" alt="icon-arrow-down"></img>
+            <div id="features-menu" class="dropdown-menu">
+              <ul>
+                <li><img src="images/icon-todo.svg"></img>Todo List</li>
+                <li><img src="images/icon-calendar.svg"></img>Calendar</li>
+                <li><img src="images/icon-reminders.svg"></img>Reminders</li>
+                <li><img src="images/icon-planning.svg"></img>Planning</li>
+              </ul>
+            </div>
+          </li>
+          <li id="company">Company<img src="images/icon-arrow-down.svg" alt="icon-arrow-down"></img>
+            <div id="company-menu" class="dropdown-menu company">
+              <ul>
+                <li>History</li>
+                <li>Our Team</li>
+                <li>Blog</li>
+              </ul>
+            </div>
+          </li>
+          <li>Careers</li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </div>
+
+      <div class="login_section">
+        <ul>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Register</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container">
+
+    <div class="box-info">
+      <h1>Make remote work</h1>
+      <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+      <a href="#">Learn more</a>
+      <div class="companies">
+        <img src="images/client-databiz.svg" />
+        <img src="images/client-audiophile.svg" />
+        <img src="images/client-meet.svg" />
+        <img src="images/client-maker.svg" />
+      </div>
+    </div>
+
+    <img class="desktop_hero" src="images/image-hero-desktop.png" />
+    <img class="mobile_hero" src="images/image-hero-mobile.png" />
+
+  </div>
+
+</body>
+</html>

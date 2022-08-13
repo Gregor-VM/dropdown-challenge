@@ -1,0 +1,406 @@
+:root{
+    --almost-white: hsl(0, 0%, 98%);
+    --medium-gray: hsl(0, 0%, 41%);
+    --almost-black: hsl(0, 0%, 8%);
+}
+
+.mobile_hero{
+    display: none;
+}
+
+.close_menu{
+    display: none;
+}
+
+.mobile_nav img:nth-child(2) {
+    display: none;
+}
+
+* {
+    box-sizing: border-box;
+    border: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--medium-gray);
+}
+
+a:hover{
+    color: var(--almost-black);
+}
+
+body{
+    color: var(--medium-gray);
+    font-family: 'Epilogue', sans-serif;
+    font-size: 15px;
+    background-color: var(--almost-white);
+}
+
+p{
+    font-size: 18px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+}
+
+nav > img{
+    margin: 1rem;
+    width: 84px;
+    height: 27px;
+}
+
+.nav_options{
+    padding: 1rem 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown_section{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    margin-left: 2rem;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown_section > ul{
+    display: flex;
+}
+
+.dropdown_section > ul li{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.dropdown_section > ul li:hover:not(:nth-child(3)){
+    color: var(--almost-black);
+}
+
+
+.dropdown_section > ul li img{
+    margin-left: 0.5rem;
+    width: 10px;
+    height: 6px;
+}
+
+#features-menu, #company-menu{
+    display: none;
+}
+
+.dropdown-menu{
+    background-color: white;
+    padding: 1rem;
+    position: absolute;
+    top: 65px;
+    left: 110px;
+    box-shadow: 0 0 2rem 1rem rgba(0,0,0,.075);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.company{
+    position: absolute;
+    left: 300px;
+}
+
+.dropdown-menu ul{
+    color: var(--medium-gray);
+}
+
+.dropdown-menu ul li{
+    padding: 0.5rem;
+}
+
+.dropdown-menu ul li img{
+    width: 14px;
+    height: 16px;
+    margin: 0;
+    margin-right: 1rem;
+}
+
+.dropdown-menu ul li:hover{
+    color: var(--almost-black);
+}
+
+
+.login_section ul{
+    display: flex;
+}
+
+.login_section ul a, .login_section ul li{
+    padding: 0.75rem 1rem;
+    border-radius: 15px;
+}
+
+.login_section ul li:nth-child(2) a{
+    border: 1px solid var(--almost-black);
+    margin-left: 1rem;
+}
+
+/* INFO SECTION */
+
+.container{
+    margin: 3rem 6rem;
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.desktop_hero{
+    align-self: center;
+    width: 40%;
+    height: 40%;
+}
+
+.box-info{
+    margin-left: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.box-info > *{
+    margin: 1.5rem 0;
+}
+
+.box-info p {
+    line-height: 2rem;
+    width: 70%;
+}
+
+.box-info h1{
+    width: 85%;
+    margin-top: 6rem;
+    font-size: 80px;
+    color: var(--almost-black);
+}
+
+.box-info a{
+    text-align: center;
+    width: 25%;
+    color: var(--almost-white);
+    background-color: var(--almost-black);
+    font-size: 18px;
+    padding: 1rem;
+    border-radius: 15px;
+    border: 2px solid var(--almost-black);
+}
+
+.box-info a:hover{
+    color: var(--almost-black);
+    background-color: var(--almost-white);
+}
+
+.companies > img{
+    width: unset;
+    height: unset;
+    margin: auto 1rem;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 840px) {
+    .container{
+        flex-direction: column-reverse;
+    }
+
+    .desktop_hero {
+        width: 60%;
+    }
+}
+
+@media (max-width: 750px) {
+
+    .container{
+        width: 100%;
+        margin: auto 2rem;
+    }
+
+    .box-info{
+        margin: 0;
+        text-align: center;
+    }
+
+    .box-info > h1, .box-info > p {
+        width: 100%;
+    }
+
+    .box-info > a{
+        align-self: center;
+    }
+
+    .desktop_hero {
+        width: 60%;
+    }
+
+    .desktop_hero {
+        margin-top: 2rem;
+    }
+
+    .nav_options{
+        margin-left: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .dropdown_section{
+        margin-bottom: 2rem;
+    }
+}
+
+@media (min-width: 550px) {
+    .nav_options{
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .dropdown-menu{
+        position: inherit;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    #features, #company{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .close_menu{
+        display: block;
+        align-self: flex-end;
+    }
+
+    .background{
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+        opacity: 0;
+        z-index: -1;
+        transition: all .2s ease-in-out;
+    }
+
+    .login_section, .login_section ul li, .login_section ul li a{
+        text-align: center;
+        width: 100%;
+    }
+
+    .login_section ul li:nth-child(2) a{
+        margin: 0;
+    }
+
+    .login_section ul li{
+        display: flex;
+    }
+
+    .logo{
+        margin-left: 0;
+    }
+
+    .companies{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .companies > img{
+        margin: 0;
+        width: 20%;
+    }
+
+    .companies > img:nth-child(2){
+        width: 15%;
+    }
+
+    .mobile_nav{
+        display: flex;
+        margin: 2rem;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .mobile_nav img:nth-child(2) {
+        width: 32px;
+        height: 18px;
+        display: block;
+    }
+
+
+    .mobile_hero{
+        margin-top: 1rem;
+        display: block;
+    }
+
+    .desktop_hero{
+        display: none;
+    }
+
+    .container{
+        margin: 0;
+    }
+
+    .box-info > * {
+        margin: 1rem 0;
+    }
+
+    .box-info a{
+        width: fit-content;
+    }
+
+    .box-info h1 {
+        margin-top: 3rem;
+        font-size: 35px;
+    }
+
+    .desktop_hero {
+        width: 100%;
+    }
+
+    .nav_options{
+        padding-top: 5rem;
+        justify-content: flex-start;
+        position: fixed;
+        right: 0;
+        top: 0;
+        margin: 0;
+        flex-direction: column;
+        height: 100%;
+        width: 0;
+        padding: 0;
+        font-size: 18px;
+        background-color: white;
+        transition: all .2s ease-in-out;
+    }
+
+    .nav_options ul, .login_section ul{
+        flex-direction: column;
+    }
+
+    .dropdown_section, .dropdown_section ul{
+        width: 100%;
+    }
+
+    .nav_options ul li, .login_section ul li{
+        width: 100%;
+    }
+}
