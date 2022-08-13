@@ -28,6 +28,8 @@ Users should be able to:
 
 ### Links
 
+- Solution URL: [Solution URL](https://www.frontendmentor.io/solutions/intro-section-with-dropdown-navigation-vanilla-javascript--M77y35qpw)
+- Live Site URL: [Live Site](https://gregor-vm.github.io/dropdown-challenge/)
 
 
 ### Built with
